@@ -20,7 +20,7 @@ def examination_form(request):
 
 
 def update(request):
-    file_path = os.path.join(RES_DIR, '40001_40900.xls')
+    file_path = os.path.join(RES_DIR, '40001-40900.xlsx')
     import_person_info(file_path)
     return redirect('home')
 
@@ -34,7 +34,7 @@ def import_person_info(file):
         person.team = sheet.cell(row_index, 2).value
         person.team_no = get_team_no(person.team)
         person.name = sheet.cell(row_index, 3).value
-        person.sex = sheet.cell(row_index, 4).value
+        person.sex = int(sheet.cell(row_index, 4).value)
         person.age = int(sheet.cell(row_index, 5).value)
         person.community = sheet.cell(row_index, 6).value
         person.contact = format_contact(sheet.cell(row_index, 7).value)

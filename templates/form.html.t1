@@ -49,7 +49,7 @@
 {% for person in persons %}
 <table>
     <tr>
-        <td colspan="4" class="title">中国癌症筛查试验可行性研究（T0）体检引导单</td>
+        <td colspan="4" class="title">中国癌症筛查试验可行性研究（T1）体检引导单</td>
     </tr>
 
     <tr>
@@ -85,13 +85,13 @@
     </tr>
     <tr>
         <td>
-            {% if person.team_no == 1 or person.team_no == 2 %}
+            {% if person.team_no == 1 or person.team_no == 2 or person.team_no == 3 %}
                 &radic;
             {% endif %}
         </td>
-        <td>低剂量螺旋CT</td>
-        <td>门诊楼 1 层放射科</td>
-        <td>凭《CT预约单》检查</td>
+        <td>问卷调查</td>
+        <td>门诊楼 9 层研究所</td>
+        <td>加测身高、体重</td>
     </tr>
     <tr>
         <td>
@@ -99,9 +99,9 @@
                 &radic;
             {% endif %}
         </td>
-        <td>全肠镜</td>
-        <td>门诊楼2层内窥镜室</td>
-        <td>凭《肠镜预约单》检查</td>
+        <td>低剂量螺旋CT</td>
+        <td>门诊楼 1 层放射科</td>
+        <td>凭《CT预约单》检查</td>
     </tr>
     <tr>
         <td>
